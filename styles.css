@@ -66,3 +66,14 @@
     background-color: black;
     border-radius: 5em;
   }
+
+  .nose {
+    background-color: rgb(205, 165, 138);
+    width: 10%;
+    height: 30%;
+    position: absolute;
+    left: 44%;
+    top: 30%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+  }
