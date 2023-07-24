@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Self Portrait</title>
+</head>
+<body>
+    <!-- div - class "drawing" serves as the backdrop for the entire portrait -->
+    <div class="drawing">  
+        <!-- div - class "face" be the container for eyes, nose and mouth, it's using position relative to 
+            adjust them inside with their own position absolute -->
+        <div class="face">
+            <!-- divs with class eye-left/eye-right and their children pupil use flex positioning to center the content -->
+            <div class="eye-left">
+                <div class="pupil">
+                    <div class="iris"></div>
+                </div>
+            </div>
+            <div class="eye-right">
+                <div class="pupil">
+                    <div class="iris"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
