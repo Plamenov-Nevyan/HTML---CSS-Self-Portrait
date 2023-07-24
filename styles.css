@@ -34,6 +34,48 @@
     position: relative;
   }
 
+  .eyebrow-left{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 22%;
+    height: 2%;
+    background-color: darkgoldenrod;
+    border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
+    }
+
+    .eyebrow-left::after {
+        background: #fca;
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 54%;
+        width: 100%;
+        border-radius: 50% 50% 0 0;
+    }
+
+  .eyebrow-right {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    width: 22%;
+    height: 2%;
+    background-color: darkgoldenrod;
+    border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
+  }
+
+  .eyebrow-right::after {
+    background: #fca;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 54%;
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+  }
+
   .eye-left {
     background-color: white;
     position: absolute;
