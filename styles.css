@@ -246,3 +246,13 @@
     top: 28%;
     left: 27%;
   }
+
+  .neck {
+    position: absolute;
+    width: 16%;
+    height: 10%;
+    bottom: 37%;
+    left: 43.2%;
+    background-color: #fca;
+    z-index: -1;
+  }
