@@ -259,15 +259,18 @@
 
   .clothes {
     position: absolute;
-    width: 30%;
+    width: 60%;
     height: 10%;
     bottom: 30%;
-    left: 41.2%;
+    left: 21.2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .collars {
-    width: 67%;
-    height: 52%;
+    width: 44%;
+    height: 56%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -299,4 +302,14 @@
     height: 100%;
     transform: rotate(-25deg);
     border-radius: 10% 10% 0 0;
+  }
+
+  .shirt-and-shoulders {
+    width: 100%;
+    height: 148%;
+    background-color: navy;
+    position: absolute;
+    bottom: -39px;
+    z-index: -1;
+    border-radius: 20% 20% 50% 50%;
   }
