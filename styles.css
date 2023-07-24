@@ -145,3 +145,26 @@
     position: relative;
     border-radius: 0 0 100% 100%;
   }
+
+  .ears {
+    width: 44%;
+    height: 10%;
+    z-index: 1;
+    position: relative;
+    top: -7em;
+    left: 28%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ear-left, .ear-right {
+    width: 10%;
+    height: 100%;
+    border-radius: 90% 100% 70% 100% / 70% 100%;
+    background-color: #fca;
+    box-shadow: inset -9vmin 0 0 -7vmin var(--line);
+    transform: rotate(2deg);
+    top: 28%;
+    left: 27%;
+  }
