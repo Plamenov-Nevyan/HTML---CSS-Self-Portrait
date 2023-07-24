@@ -77,3 +77,59 @@
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     border-radius: 100% 100% / 33% 43% 30% 30%;
   }
+
+  .mouth {
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    bottom: 20%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+    overflow: hidden;
+  }
+
+  .mouth .lip-top {
+    background-color:rgba(245, 130, 130, 0.823);
+    width: 100%;
+    height: 35%;
+    position: relative;
+  }
+
+  .mouth .lip-top::before{
+    content: '';
+    position: absolute;
+    background-color:#fca;
+    left: 0;
+    top: -1px;
+    height: 60%;
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+  }
+
+.mouth .lips-divider {
+    width: 100%;
+    height: 4%;
+    background-color: black;
+    border-radius: 0 0 100% 100%;
+    position: relative;
+}
+
+.mouth .lips-divider::before{
+    content: '';
+    position: absolute;
+    background-color:rgba(245, 130, 130, 0.823);;
+    left: 0;
+    top: -1px;
+    height: 60%;
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+  }
+  .mouth .lip-bottom {
+    background-color: rgba(245, 130, 130, 0.823);
+    width: 100%;
+    height: 35%;
+    position: relative;
+    border-radius: 0 0 100% 100%;
+  }
