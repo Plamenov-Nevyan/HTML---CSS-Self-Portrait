@@ -8,12 +8,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vmin;
-    height: 80vmin;
+    height: 90vmin;
 }
 
-.drawing:hover {
-    animation: tilt-right .5s infinite;
-  }
+.head {
+    position: relative;
+    height: 100%;
+}
 
 .hair  {
     width: 40%;
@@ -237,12 +238,12 @@
 
 
   .ears {
-    width: 44%;
+    width: 42%;
     height: 10%;
     z-index: 1;
     position: relative;
-    top: -7em;
-    left: 28%;
+    top: 0;
+    left: 29%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -337,8 +338,8 @@
   }
 
   .arms{
-    width: 85%;
-    height: 29%;
+    width: 84%;
+    height: 23%;
     background-color: #fca;
     border-radius: 100%/200vmin;
     left: 52%;
@@ -371,5 +372,66 @@
 
     100% {
         animation-timing-function: ease-out;
+    }
+  }
+
+  @media (width > 500px){
+    .ears{
+        top: -5em;
+    }
+
+    .arms {
+        min-height: 25%;
+        max-height: 35%;
+    }
+  }
+
+  @media (max-width: 500px){
+    .ears {
+        top: -5em;
+    }
+    .arms{
+        min-height: 33%
+    }
+  }
+
+  @media (max-width: 390px){
+    .ears {
+        top: -3em;
+    }
+    .arms{
+        min-height: 43% ;
+    }
+
+    .beard-left {
+        left: .5em;
+    }
+
+    .beard-right{
+        right: .5em;
+    }
+
+    .beard-bottom {
+        bottom: -.8em;
+    }
+  }
+
+  @media(width <= 1000px){
+    .arms {
+        max-height: 20%;
+    }
+  }
+
+  @media (width > 390px ){
+
+    .beard-left {
+        left: .7em;
+    }
+
+    .beard-right{
+        right: .7em;
+    }
+    .beard-bottom {
+        bottom: -.5em;
     }
   }
