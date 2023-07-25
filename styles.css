@@ -2,6 +2,35 @@
     box-sizing: border-box;
 }
 
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+.color-splash {
+  position: absolute;
+  width: 45vw;
+  height: 80vmin;
+  background:    
+  repeating-conic-gradient(rgb(255, 109, 56) 0 3%, #22abc700 0 11%),
+  repeating-conic-gradient(#0000 0 5%, #00f 0 7%) 50% / 60% 60%,
+  repeating-conic-gradient(#0000 0 7%, #00f 0 9%) 50% / 70% 70%,
+  repeating-conic-gradient(#0000 0 11%, #00f 0 13%) 50% / 80% 80%,
+  radial-gradient(#00f 22%, #0000 0),
+  linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-repeat: no-repeat;
+  filter: blur(20px) contrast(20);
+  z-index: -2;
+  top: 0;
+  left: 0;
+  transform: translate(-10%, 0%);
+  /* box-shadow: 0 0 0 50px #fff; */
+  animation: gradient 15s ease infinite;
+  border-radius: 100%;
+}
+
 .drawing {
     position: absolute;
     top: 55%;
@@ -11,9 +40,24 @@
     height: 90vmin;
 }
 
+.drawing svg {
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+}
+
 .head {
     position: relative;
     height: 100%;
+}
+
+.head:has(.eye-right:hover){
+  animation: tilt-left 1s ease 0s 1 normal forwards;
+}
+
+.head:has(.eye-left:hover){
+  animation: tilt-right 1s ease 0s 1 normal forwards;
 }
 
 .hair  {
@@ -349,6 +393,18 @@
     z-index: -2;
   }
 
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   @keyframes blink {
     90% {
         transform: none;
@@ -365,14 +421,17 @@
   }
 
   @keyframes tilt-right {
-    90% {
-        transform: rotate(45deg);
-        animation-timing-function: ease-in;
-    }
-
     100% {
+        transform: rotate(45deg);
         animation-timing-function: ease-out;
     }
+  }
+
+  @keyframes tilt-left {
+    100% {
+      transform: rotate(-45deg);
+      animation-timing-function: ease-out;
+  }
   }
 
   @media (width > 500px){
