@@ -1,0 +1,264 @@
+.head {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.head:has(.eye-right:hover){
+  animation: tilt-left 1s ease 0s 1 normal forwards;
+}
+
+.head:has(.eye-left:hover){
+  animation: tilt-right 1s ease 0s 1 normal forwards;
+}
+
+.hair  {
+    width: 40%;
+    height: 10%;
+    border-radius: 90% 90% 30% 30% / 100%;
+    background: darkgoldenrod;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    z-index: 1;
+  }
+
+.face {
+    width: 36%;
+    height: 45%;
+    background: #fca;
+    border-radius: 100% 100% / 40% 40% 120% 120%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+  }
+
+  .eyebrow-left{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 22%;
+    height: 2%;
+    background-color: darkgoldenrod;
+    border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
+    }
+
+    .eyebrow-left::after {
+        background: #fca;
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 54%;
+        width: 100%;
+        border-radius: 50% 50% 0 0;
+    }
+
+  .eyebrow-right {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    width: 22%;
+    height: 2%;
+    background-color: darkgoldenrod;
+    border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
+  }
+
+  .eyebrow-right::after {
+    background: #fca;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 54%;
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+  }
+
+  .eye-left {
+    background-color: white;
+    position: absolute;
+    border: 2px solid rgb(205, 165, 138);
+    width: 20%;
+    height: 10%;
+    left: 15%;
+    top: 30%;
+    border-radius: 100% 100% / 85% 85% 120% 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .eye-right {
+    background-color: white;
+    position: absolute;
+    border: 2px solid rgb(205, 165, 138);
+    width: 20%;
+    height: 10%;
+    right: 15%;
+    top: 30%;
+    border-radius: 100% 100% / 85% 85% 120% 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eye-left, .eye-right {
+    animation: blink 2s infinite;
+    animation-delay: 3s;
+  }
+
+  .pupil {
+    background-color: darkgray;
+    width: 50%;
+    height: 80%;
+    border-radius: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iris {
+    width: 30%;
+    height: 50%;
+    background-color: black;
+    border-radius: 5em;
+  }
+
+  .nose {
+    background-color: rgb(205, 165, 138);
+    width: 10%;
+    height: 30%;
+    position: absolute;
+    left: 44%;
+    top: 30%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+  }
+
+  .mouth {
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    bottom: 20%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+    overflow: hidden;
+  }
+
+  .mouth .lip-top {
+    background-color:rgba(245, 130, 130, 0.823);
+    width: 100%;
+    height: 35%;
+    position: relative;
+  }
+
+  .mouth .lip-top::before{
+    content: '';
+    position: absolute;
+    background-color:#fca;
+    left: 0;
+    top: -1px;
+    height: 60%;
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+  }
+
+.mouth .lips-divider {
+    width: 100%;
+    height: 4%;
+    background-color: black;
+    border-radius: 0 0 100% 100%;
+    position: relative;
+}
+
+.mouth .lips-divider::before{
+    content: '';
+    position: absolute;
+    background-color:rgba(245, 130, 130, 0.823);;
+    left: 0;
+    top: -1px;
+    height: 60%;
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+  }
+  .mouth .lip-bottom {
+    background-color: rgba(245, 130, 130, 0.823);
+    width: 100%;
+    height: 35%;
+    position: relative;
+    border-radius: 0 0 100% 100%;
+  }
+
+  .beard-left {
+    width: 20%;
+    height: 45%;
+    background: darkgoldenrod;
+    clip-path: polygon(0 0, 44% 53%, 124% 117%, 30% 68%);
+    bottom: 0;
+    position: absolute;
+    left: 1em;
+    transform: rotate(-13deg);
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+  }
+
+  .beard-right {
+    clip-path: polygon(100% 0, 68% 68%, 0 100%, 48% 60%);
+    bottom: 0;
+    position: absolute;
+    right: 1em;
+    transform: rotate(13deg);
+    width: 20%;
+    height: 45%;
+    background: darkgoldenrod;
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+  }
+
+  .beard-bottom {
+    clip-path: polygon(98% 54%, 52% 80%, 0 60%, 53% 100%);
+    bottom: -21px;
+    position: absolute;
+    right: 18%;
+    width: 62%;
+    height: 45%;
+    z-index: 2;
+    background: darkgoldenrod;
+    border-radius: 100% 100% / 33% 43% 30% 30%;
+  }
+
+
+  
+  @keyframes blink {
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+
+    93% {
+        transform: translateY(15px) scaleY(0);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+    }
+  }
+
+  @keyframes tilt-right {
+    100% {
+        transform: rotate(45deg);
+        animation-timing-function: ease-out;
+    }
+  }
+
+  @keyframes tilt-left {
+    100% {
+      transform: rotate(-45deg);
+      animation-timing-function: ease-out;
+  }
+  }

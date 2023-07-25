@@ -1,0 +1,72 @@
+
+
+@media (width <= 768px){
+    .head:has(.eye-right:active){
+      animation: tilt-left 1s ease 0s 1 normal forwards;
+    }
+    
+    .head:has(.eye-left:active){
+      animation: tilt-right 1s ease 0s 1 normal forwards;
+    }
+   }
+  
+    @media (width > 500px){
+      .ears{
+          top: -5em;
+      }
+  
+      .arms {
+          min-height: 25%;
+          max-height: 35%;
+      }
+    }
+  
+    @media (max-width: 500px){
+      .ears {
+          top: -5em;
+      }
+      .arms{
+          min-height: 33%
+      }
+    }
+  
+    @media (max-width: 390px){
+      .ears {
+          top: -3em;
+      }
+      .arms{
+          min-height: 43% ;
+      }
+  
+      .beard-left {
+          left: .5em;
+      }
+  
+      .beard-right{
+          right: .5em;
+      }
+  
+      .beard-bottom {
+        bottom: -0.5em;
+      }
+    }
+  
+    @media(width <= 1000px){
+      .arms {
+          max-height: 20%;
+      }
+    }
+  
+    @media (width > 390px ){
+  
+      .beard-left {
+          left: .7em;
+      }
+  
+      .beard-right{
+          right: .7em;
+      }
+      .beard-bottom {
+          bottom: -.5em;
+      }
+    }
